@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+$border-radius: 6px;
+
+$small-screen: 576px !default;
+$medium-screen: 768px !default;
+$large-screen: 992px !default;
+$extra-large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$medium-screen})" !default;
+$large-and-up: "only screen and (min-width : #{$large-screen})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$extra-large-screen})" !default;
+
+$large-and-down: "only screen and (max-width : #{$extra-large-screen})" !default;
+$small-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$large-screen})" !default;
+
+$focus-outline-color: #c8ddfe;
+$primary-color: #3b82f6;
+$primary-darker-color: #3a71cb;
+$error-color: #e24c4c;
+$title-color: #000;
+$text-color: #484d56;
+$secondary-text-color: #6d737e;
+$text-on-primary-color: #fff;
+$secondary-text-on-primary-color: darken($text-on-primary-color, 30%);
+$border-color: #dfe2e7;
+$header-color: #f9fafb;
+
+*:focus { box-shadow: none !important; }
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  display: block;
+  padding: 0;
+  min-width: 320px;
+  text-align: center;
+  background-color: #e1effe;
+}
+
+#app {
+  overflow-x: hidden;
+}
+
+.list-record {
+  height: 6rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  border-bottom: 1px solid $border-color;
+  align-items: center;
+  * {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .actions {
+    color: $primary-color;
+    font-size: 1.5rem;
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  .title a {
+    color: $text-color;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 1.2rem
+  }
+  .title a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media #{$medium-and-up} {
+  .list-record {
+    gap: 2rem;
+    height: 4.5rem;
+  }
+}
+
+// responsive-group on selline klass, mille sisu on väiksel ekraanil vertikaalne ja suurel horisontaalne
+@media #{$small-and-down} {
+  .responsive-group > * {margin-bottom: 0.25rem}
+}
+@media #{$medium-and-up} {
+  .responsive-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.circle {
+  border-radius: 50% !important;
+}
+
+.floating-labels.grid > * {margin-top: 1.5rem}
+
+h1 {
+  margin: 0 0 2rem 1rem;
+  font-size: 1.5rem;
+  color: $title-color;
+}
+
+a {
+  color: $primary-color;
+  cursor: pointer;
+}
+
+#app {
+.p-inputtext, .p-button, .p-inputgroup-addon, .p-dropdown {padding: 0.5rem 1rem; height: 2.5rem; align-items: center}
+.p-dropdown-label {padding-left: 0; padding-right: 0}
+.p-dropdown .p-dropdown-trigger {width: 1rem; margin-left: 1rem}
+}
