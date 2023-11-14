@@ -19,9 +19,9 @@ env:        ## Generate DotEnv file
 	source ./.env
 
 dev:        ## Start dev server in
-#	#cordova run browser -- --live-reload
+	cordova run browser -- --live-reload
 #	- pkill -9 -f cordova;
-	cordova run browser --live-reload
+#	cordova run browser --live-reload --ignore="libs/**/*.*"
 
 reset:      ## Reset project
 	rm -rf node_modules
@@ -30,7 +30,12 @@ reset:      ## Reset project
 	-. cmd/removePlugins.sh
 
 build:      ## Build project
-	./scripts/build.sh
+#	./scripts/build.sh
+	cordova prepare -d --verbose
+	cordova build --verbose
+
+run:
+	cordova run android --verbose --debug --device
 
 assets:
 	./scripts/assets.sh

@@ -2,10 +2,17 @@
 <widget id="ee.digicmr.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>DigiCMR</name>
     <description>Sample Apache Cordova App</description>
-    <author email="dev@cordova.apache.org" href="https://cordova.apache.org">
-        Apache Cordova Team
+    <author email="andres@apajo.ee" href="https://www.apajo.ee/">
+        Andres Pajo
     </author>
-    <content src="index.html" />
+    <content src="https://dev.cmr.atv.ee/" />
+    <access origin="*" />
+    <icon src="res/icon.png" />
+
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
+
+    <preference name="CRIInjectFirstFiles" value="www/js/init.js" />
+    <preference name="CRIPageLoadPromptInterval" value="5" />
+    <preference name="CRIShowConnectionErrorDialog" value="1" />
 </widget>
