@@ -6,7 +6,7 @@ export ANDROID_HOME="/media/apajo/data/tools/android-sdk" # /usr/lib/android-sdk
 export ANDROID_SDK_ROOT="/media/apajo/data/tools/android-sdk"
 
 export ORG_GRADLE_PROJECT_cdvMinSdkVersion=21
-export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https\://services.gradle.org/distributions/gradle-7.4.2-all.zip
+export CORDOVA_ANDROID_GRADLE_DISTRIBUTION_URL=https\://services.gradle.org/distributions/gradle-8.0-all.zip
 
 export GRADLE_HOME=/opt/gradle/latest/gradle-7.6/
 export PATH=${GRADLE_HOME}/bin:${PATH}

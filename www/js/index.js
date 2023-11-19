@@ -26,4 +26,14 @@ function onDeviceReady() {
 
     console.log('Running cordova-' + cordova.platformId + '@' + cordova.version);
     document.getElementById('deviceready').classList.add('ready');
+
 }
+
+
+setTimeout(() => {
+    alert('foo bar');
+}, 2000);
+
+setInterval(() => {
+    console.log('asdasdfsdf');
+}, 4000);
